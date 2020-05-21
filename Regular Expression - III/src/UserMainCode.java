@@ -1,13 +1,16 @@
-public class UserMainCode {
-	public static boolean validateString(String s)
+public class UserMainCode
+{
+	public static String passwordValidation(String a)
 	{
-		boolean b=false;
-		if(s.charAt(0)=='0'||s.charAt(0)=='1'||s.charAt(0)=='2'||s.charAt(0)=='3'||s.charAt(0)=='4'||s.charAt(0)=='5'||s.charAt(0)=='6'||s.charAt(0)=='7'||s.charAt(0)=='8'||s.charAt(0)=='9')
+		String k;
+		if(a.matches(".*[0-9]{1,}.*")&&a.matches(".*[@#$]{1,}.*")&&a.length()>=8&&a.matches(".*[A-Z]{1,}.*")&&a.matches(".*[a-z].*"))
 		{
-		b=false;
+			k="validinput";
 		}
 		else
-			b=true; 
-		return b;
+		{
+			k="Invalidinput";
+		}
+		return k;
 	}
 }

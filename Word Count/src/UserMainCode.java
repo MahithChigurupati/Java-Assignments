@@ -1,14 +1,19 @@
-public class UserMainCode { 
-	public static int countWord(int n,String str[],int c)
+public class UserMainCode {
+	public static int sumOfDigits(String[] s1)
 	{
-		int count=0;
-		for(int i=0;i<str.length;i++)
+		int sum = 0;
+		for(int i=0;i<s1.length;i++)
 		{
-			if(str[i].length()==c)
+			String s = s1[i];
+			for(int j = 0;j<s.length();j++)
 			{
-				count++;
+				Character c = s.charAt(j);
+				if(Character.isDigit(c))
+				{
+					sum+=Integer.parseInt(s.valueOf(c));
+				}
 			}
 		}
-		return count;
+		return sum;
 	}
 }
